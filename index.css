@@ -1,0 +1,245 @@
+:root {
+    --back-color: #a590c7;
+    --dull-color: white;
+    --extra-color: rgb(21, 155, 99);
+    --extra-color2: rgb(23, 112, 75);
+    --passive-color: #7854b3;
+    --active-color: #574179;
+    --font-color: rgb(97, 97, 97);
+    --divisor-color: rgb(209, 209, 209);
+
+    scroll-behavior: smooth;
+    background-color: var(--back-color);
+    font-size: larger;
+}
+
+html, body {
+    margin: 0;
+}
+
+form, #results {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+    color: var(--font-color);
+    background-color: var(--dull-color);
+
+    border-top: 5px solid var(--passive-color);
+    border-radius: 20px;
+
+    max-width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3rem;
+    padding: 3rem;
+}
+#results {
+    text-align: center;
+}
+
+p {
+    font-size: x-large;
+}
+
+img {
+    max-width: 700px;
+    margin: 1rem;
+}
+
+
+
+#taskbar {
+    display: flex;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+
+    z-index: 1;
+
+    background-color: white;
+}
+#task-btn {
+    margin-right: auto;
+    margin-top:auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    max-height: 50px;
+}
+#title1 {
+    color: var(--active-color);
+    margin-left: auto;
+}
+#title2 {
+    color: var(--active-color);
+    margin-right: 20px;
+}
+#profile-pic {
+    margin-left: auto;
+    max-width: 40px;
+}
+#task-list {
+    float: left;
+    top: 50px;
+
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+    color: var(--font-color);
+    background-color: var(--dull-color);
+
+    border-top: 5px solid var(--passive-color);
+    border-bottom: 5px solid var(--passive-color);
+    border-radius: 10px;
+
+    max-width: 450px;
+    margin-left: 20px;
+
+    transform: scale(0);
+    transition: transform ease-in-out 500ms;
+}
+
+
+.label-disagree {
+    color: var(--passive-color);
+    font-size: medium;
+
+    float: left;
+    transform: translateX(9rem);
+}
+.label-agree {
+    color: var(--extra-color);
+    font-size: medium;
+
+    float: right;
+    transform: translateX(-9rem);
+}
+
+/* Hide native radio input */
+input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: var(--dull-color);
+
+    /*** custom unchecked radio style ***/
+    border-width: 0.15em;
+    border-style: solid;
+    border-radius: 50%;
+}
+input[type="radio"]:checked {
+    background-color: currentcolor;
+}
+
+/* Change native checkbox background */
+input[type="checkbox"] {
+    accent-color: var(--passive-color);
+}
+
+
+/* Question padding */
+#q0 {
+    padding-top: 1rem;
+}
+#q1 {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+#q2, #q3, #q4, #q5 {
+    opacity: 0;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-top: 2px solid var(--divisor-color);
+}
+
+.q {
+    transition: opacity ease 500ms;
+}
+
+/* Question selector positioning */
+#q0-yes, #q0-no {
+    width: 16px;
+    height: 16px;
+}
+.cd, .ca {
+    width: 32px;
+    height: 32px;
+}
+.d, .a {
+    width: 24px;
+    height: 24px;
+    transform: translateY(-3px);
+}
+.i {
+    width: 16px;
+    height: 16px;
+    transform: translateY(-8px);
+}
+
+/* Question selector color */
+#q0-yes, #q0-no {
+    color: var(--passive-color);
+    border-color: var(--font-color);
+}
+.i {
+    color: var(--font-color);
+    border-color: var(--font-color);
+}
+.a, .ca {
+    color: var(--extra-color);
+    border-color: var(--extra-color);
+}
+.d, .cd {
+    color: var(--passive-color);
+    border-color: var(--passive-color);
+}
+.ca, .a, .i, .d, .cd {
+    margin: 10px;
+}
+
+
+#submit-btn, #next-btn, #task-btn, #back-btn {
+    color: #fff;
+
+    border:none; 
+    border-radius:10px; 
+    padding:10px;
+
+    min-height:30px; 
+    min-width: 80px;
+
+    transition-property: background-color, opacity;
+    transition-duration: 500ms; 
+    transition-timing-function: ease-out;
+}
+#submit-btn:hover, #next-btn:hover, #task-btn:hover {
+    background-color: var(--active-color);
+}
+#back-btn:hover {
+    background-color: var(--extra-color2);
+}
+#submit-btn, #next-btn, #task-btn {
+    background-color: var(--passive-color);
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+#back-btn {
+    background-color: var(--extra-color);
+
+    margin-left: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#submit-btn, #next-btn {
+    opacity: 0;
+}
+/*
+animation: colorChange .5s 1;
+@keyframes colorChange {
+from {background-color: var(--passive-color);}
+to {background-color: var(--passive-color);}
+}
+*/

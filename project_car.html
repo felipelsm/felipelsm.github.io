@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="stylesheet" type="text/css" href="styles-profile.css" />
+        <title>Felipe Martins</title>
+    </head>
+
+    <body>
+
+        <div id="container">
+            <div id="text-container">
+                <a id="home" href="index.html">Home</a>
+
+                <div class="project-container">
+
+                    <h1 id="title">Remote Controlled Car</h1>
+                    <p class="project-subtitle">Hardware</p>
+                        <div id="profile-slides-wrapper">
+                            <div id="profile-slides">
+                                <img id="profile-slide1" src="images/project_car.jpeg" alt="Remote Controlled Car Components" />
+                            </div>
+                        </div>
+                        <p class="project-description">The brains of the operation are the Arduino UNO board. I used it to connect all the other components, including the Bluetooth module (more anout that in the Software section) and the motors.</p>
+                        <p class="project-description">The back wheels are powered by one DC motor each, controlled by the Arduino microcontroller. The front wheels are connected to one servo motor each through an axis, that is used to turn them and make the car's trail curve.</p>
+                        <p class="project-description">I previously tried 3D printing the chassis and the wheels. However, that did not work well at all, so I have decided to buy the wheels and build the chassis out of wood, although that is still a work in progress, so the car is not assembled as of yet.</p>
+                        <p class="project-description">With this project I realized that making efficient CAD (Computer Aided Design) is much harder than it may initially look, and is quite time consuming. I started out thinking I would just have a simple chassis where I could fit everything, but it wasn't so simple. The electronic circuit is very delicate and so it needs the right space to be properly fixed in place and properly tweaked in the future. Something I was also not expecting was the amount of tweaking that would need to be done due to debugging and maintenance.</p>
+                    <p class="project-subtitle">Software</p>
+                        <div id="profile-slides-wrapper">
+                            <div id="profile-slides">
+                                <img id="profile-slide2" src="images/app_pic.png" alt="Remote Controlled Car App" />
+                            </div>
+                        </div>
+                        <p class="project-description">The Software consists of two parts: the program loaded in the Arduino and the mobile app. They connect via Bluetooth so that the car can be controlled remotely through my phone.</p>
+                        <p class="project-description">The app, built with the Android Studio Integrated Development Environment for optimized Android apps, is composed of just four buttons, to send the car forward and backward and to make it turn to the left and to the right. It does so by connecting to the board that, in turn, controls all the motors.</p>
+                        <p class="project-description">The app is also not working properly yet because I couldn't figure out a way to connect it to my phone. Therfore, I had to run it in an Android emulator on my computer.</p>
+                        <p class="project-description">Finally, I had to learn Java to be able to program the app. It was not a hard task, given that I already had experience with C++, and they are fairly similar, but I still would not call myself proficient. I plan on making the app more complex, with various different buttons for distinct velocities.</p>
+                        <p class="project-description">The final version of the project should even be able to complete automated maneuvers using more complex logic in the app, and have unltrasonic sensors that would allow it to perceive its sorroundings to a certain level and dodge fixed obstacles in a flat plane.</p>
+                        
+                </div>
+            </div> 
+        </div>
+        
+    </body>
+</html>
